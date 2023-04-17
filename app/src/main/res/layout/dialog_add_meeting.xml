@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bubblegum_pink"
+    >
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_header"
+        style="@style/HeaderStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Новая встреча"
+        android:textSize="20dp"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/dialog_add_meeting_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/dialog_add_meeting_header"
+        android:layout_marginHorizontal="8dp"
+
+        android:background="@drawable/divider" />
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_label_name"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_add_meeting_divider"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+
+        android:text="Название:"
+        android:textSize="19dp" />
+
+    <EditText
+        android:id="@+id/dialog_add_meeting_edit_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialog_add_meeting_divider"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dialog_add_meeting_label_name"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_label_place"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_add_meeting_edit_name"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+
+        android:text="Место:"
+        android:textSize="19dp" />
+
+    <EditText
+        android:id="@+id/dialog_add_meeting_edit_place"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialog_add_meeting_edit_name"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dialog_add_meeting_label_place"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"/>
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_instruction_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_add_meeting_edit_place"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Выберите один айди места:"/>
+
+    <ListView
+        android:id="@+id/dialog_add_meeting_list_places"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/dialog_add_meeting_instruction_place"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_label_start"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_add_meeting_list_places"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+
+        android:text="Время:"
+        android:textSize="19dp" />
+
+    <EditText
+        android:id="@+id/dialog_add_meeting_edit_start"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialog_add_meeting_list_places"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dialog_add_meeting_label_start"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="дд.ММ.гг ЧЧ:мм:сс"/>
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_instruction_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_add_meeting_edit_start"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Введите время в формате: дд.ММ.гг ЧЧ:мм:сс\nНапример: 17.04.23 14:30:00"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_label_participants"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/dialog_add_meeting_instruction_start"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+
+        android:text="Участники:"
+        android:textSize="19dp" />
+
+    <EditText
+        android:id="@+id/dialog_add_meeting_edit_participants"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialog_add_meeting_instruction_start"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/dialog_add_meeting_label_participants"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"/>
+
+    <TextView
+        android:id="@+id/dialog_add_meeting_instruction_participants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_add_meeting_edit_participants"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Выберите участников стречи:"/>
+
+    <ListView
+        android:id="@+id/dialog_add_meeting_list_participants"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/dialog_add_meeting_instruction_participants"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/dialog_add_meeting_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialog_add_meeting_list_participants"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Добавить"/>
+
+</RelativeLayout>

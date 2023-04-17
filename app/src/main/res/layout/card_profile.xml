@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/bubblegum_pink"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pc_profile_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="1000dp">
+
+            <ImageView
+                android:id="@+id/pc_profile_avatar"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ic_launcher_background"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/pc_button_change"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="16dp"
+
+            android:background="@drawable/change_button"/>
+
+        <TextView
+            android:id="@+id/pc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/pc_profile_pic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/HeaderStyle"
+            android:textSize="30dp"
+
+            android:text="Zero User"/>
+
+        <TextView
+            android:id="@+id/pc_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/pc_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/NormalStyle"
+
+            android:text="\@zero_user"/>
+
+        <TextView
+            android:id="@+id/pc_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/pc_login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/NormalStyle"
+            android:paddingBottom="8dp"
+
+            android:text="117 y.o."/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

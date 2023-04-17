@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/honey_yellow"
+    tools:context=".view.fragments.SettingsFragment">
+
+    <include
+        android:id="@+id/profile_card"
+        layout="@layout/card_profile"/>
+
+    <Button
+        android:id="@+id/settings_change_user_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+
+        android:text="Сменить пользователя"/>
+
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/bubblegum_pink"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/item_meeting_cardview_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/item_meeting_avatar"
+                android:layout_width="185dp"
+                android:layout_height="185dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/example_photo_place"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/item_meeting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingHorizontal="4dp"
+            style="@style/HeaderStyle"
+
+            android:text="Несчастливая встреча"
+            />
+
+        <TextView
+            android:id="@+id/item_meeting_time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintTop_toBottomOf="@id/item_meeting_name"
+            android:paddingHorizontal="4dp"
+            style="@style/NormalStyle"
+            android:text="14:30"
+            />
+
+        <TextView
+            android:id="@+id/item_meeting_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintTop_toBottomOf="@id/item_meeting_time_start"
+            android:paddingHorizontal="4dp"
+            style="@style/NormalStyle"
+            android:text="Петропавловская улица, 57"
+            />
+
+        <TextView
+            android:id="@+id/item_meeting_organization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintTop_toBottomOf="@id/item_meeting_address"
+            android:paddingHorizontal="8dp"
+            style="@style/NormalStyle"
+            android:text="→ У сковородки"
+            />
+
+        <ImageView
+            android:id="@+id/item_meeting_divider"
+            android:layout_width="190dp"
+            android:layout_height="1dp"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintTop_toBottomOf="@id/item_meeting_organization"
+            android:layout_margin="8dp"
+            android:background="@drawable/divider" />
+
+        <Button
+            android:id="@+id/item_meeting_button_to_map"
+            android:layout_width="190dp"
+            android:layout_height="48dp"
+            android:text="На карте"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toTopOf="@id/item_meeting_button_to_chat"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_meeting_divider" />
+
+        <Button
+            android:id="@+id/item_meeting_button_to_chat"
+            android:layout_width="190dp"
+            android:layout_height="48dp"
+            android:text="Чат встречи"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_meeting_cardview_avatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_meeting_button_to_map" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

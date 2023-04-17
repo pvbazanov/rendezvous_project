@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "934726640960",
+    "firebase_url": "https://rendezvous-first-firebase-default-rtdb.europe-west1.firebasedatabase.app/",
+    "project_id": "rendezvous-first-firebase",
+    "storage_bucket": "rendezvous-first-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934726640960:android:2a087c9e83aa6cdfc586a5",
+        "android_client_info": {
+          "package_name": "com.example.revuproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934726640960-g6rsg97vthktmh7k31hhj5q1vhrmfk03.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.revuproject",
+            "certificate_hash": "fe984c26a03dcf7f33312dc69dec515682c25d7f"
+          }
+        },
+        {
+          "client_id": "934726640960-f62n2ua6fmt414npid7e5f1rsnvdbj67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmDKQ5GqME4ioL6-heA6_R2EWp3TYiaOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934726640960-f62n2ua6fmt414npid7e5f1rsnvdbj67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

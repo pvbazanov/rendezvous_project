@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/bubblegum_pink"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cc_friend_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:id="@+id/chat_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/example_photo_friend" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/cc_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/cc_friend_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingHorizontal="6dp"
+            android:paddingTop="8dp"
+            style="@style/HeaderStyle"
+
+            android:text="Вика Счастливая"
+            />
+
+        <TextView
+            android:id="@+id/cc_last_msg_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/cc_friend_avatar"
+            app:layout_constraintTop_toBottomOf="@id/cc_chat_name"
+            android:paddingHorizontal="6dp"
+            style="@style/NormalStyle"
+
+            android:text="Вика С.:"
+            />
+
+        <TextView
+            android:id="@+id/cc_last_msg_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/cc_last_msg_author"
+            app:layout_constraintTop_toBottomOf="@id/cc_chat_name"
+            android:paddingHorizontal="0dp"
+            style="@style/NormalStyle"
+
+            android:text="Я задержусь минут на 15, извини пож..."
+            />
+
+        <TextView
+            android:id="@+id/inc_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/cc_chat_name"
+            app:layout_constraintBottom_toTopOf="@id/cc_last_msg_text"
+            android:layout_marginBottom="2dp"
+            style="@style/SmallStyle"
+
+            android:text="14:15"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

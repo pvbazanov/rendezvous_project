@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+
+    // Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
+
+}
+
+android {
+    namespace 'com.example.revuproject'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.revuproject"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-database:20.0.4'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.firebase:firebase-auth:21.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //Recycler
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    //YandexMaps
+    implementation 'com.yandex.android:maps.mobile:4.2.2-full'
+    //Okhttp
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    //Gson
+    implementation "com.google.code.gson:gson:2.8.6"
+    //Room
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:2.5.0"
+    annotationProcessor "androidx.room:room-compiler:2.5.0"
+    //Life cycle
+    def lifecycle_version = "1.1.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    //Images
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    //FireBase
+    implementation platform('com.google.firebase:firebase-bom:31.3.0')
+}

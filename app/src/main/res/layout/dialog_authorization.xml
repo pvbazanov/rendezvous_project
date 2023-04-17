@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bubblegum_pink">
+
+    <TextView
+        android:id="@+id/dialog_authorization_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+
+        android:text="Авторизация"
+        style="@style/HeaderStyle"
+        android:textSize="20dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/dialog_authorization_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_authorization_header"
+        android:layout_margin="8dp"
+
+        android:text="Ваше имя:"
+        />
+
+    <ListView
+        android:id="@+id/dialog_authorization_names_list"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/dialog_authorization_name_label"
+        android:layout_margin="8dp"/>
+
+    <ImageView
+        android:id="@+id/dialog_authorization_divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/dialog_authorization_names_list"
+        android:layout_margin="8dp"
+
+        android:background="@drawable/divider"/>
+
+    <TextView
+        android:id="@+id/dialog_authorization_header_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_authorization_divider"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+
+        android:text="Регистрация"
+        android:textSize="20dp"
+        style="@style/HeaderStyle"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/dialog_authorization_new_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_authorization_header_1"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Имя"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/dialog_authorization_new_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialog_authorization_new_name_label"
+        android:layout_marginHorizontal="8dp"
+
+        android:hint="Введите имя"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/dialog_authorization_reg_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_authorization_new_name_edit"
+        android:layout_margin="8dp"
+
+        android:text="Зарегистрироваться"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/example_photo_meeting_6"
+       android:layout_below="@id/dialog_authorization_reg_button"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
